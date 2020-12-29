@@ -17,8 +17,7 @@
      
      $remote_version = '0.0.0';
      $style_css = wp_remote_get("https://raw.githubusercontent.com/oregoom/".$theme_uri_slug."/master/style.css")['body'];
-//     $style_css = wp_remote_get("https://raw.githubusercontent.com/oregoom/".$theme_uri_slug."/master/style.css?token=50d646505e5e6f5c17a3fd66e8ad9396723580c8")['body'];
-     if ( preg_match( '/^[ \t\/*#@]*' . preg_quote( 'Version', '/' ) . ':(.*)$/mi', $style_css, $match ) && $match[1] )
+    if ( preg_match( '/^[ \t\/*#@]*' . preg_quote( 'Version', '/' ) . ':(.*)$/mi', $style_css, $match ) && $match[1] )
          $remote_version = _cleanup_header_comment( $match[1] );
     
      if (version_compare($theme_data->version, $remote_version, '<')) {
@@ -36,6 +35,15 @@
 
 //PARA QUE EL TEMA SOPORTE IMG DESTACADA
 add_theme_support( 'post-thumbnails' );
+
+add_theme_support( 'custom-logo', array(
+	'height'      => 54,
+	'width'       => 250,
+	'flex-height' => true,
+	'flex-width'  => true,
+	'header-text' => array( 'site-title', 'site-description' ),
+) );
+
 
 
 
