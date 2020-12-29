@@ -46,75 +46,15 @@ add_theme_support( 'custom-logo', array(
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//FUNCTION BLOQUE Gutenberg 'Módulo para el Curso'
-//
-//FALTA TERMINAR
-//
-//include_once 'inc/oregoom-gutenberg/oregoom-gutenberg-curso-modulos.php';
-
-
-  
-
-    add_filter( 'the_content', 'oregoom_add_style_the_content', 10, 1 );
+//add_filter( 'the_content', 'oregoom_add_style_the_content', 10, 1 );
     function oregoom_add_style_the_content( $content = null ){
 
         if( null === $content )
             return $content;
 
-        $search = array('<h3>', '<ol>', '<li>', '<a ');
-        $replace = array('<h3 class="h5 pt-4">', 
-            '<ol class="list-group list-group-flush">',
-            '<li class="list-group-item">',
-            '<a class="text-decoration-none text-dark" '
+        $search = array('<img loading="lazy"');
+        $replace = array('<amp-img width="730" height="411" layout="responsive" '
             );
         
-        if(is_page_template('templates/template-curso.php')){
-              return str_replace( $search, $replace, $content );  
-        } else {
-            return $content;
-        }       
+        return str_replace( $search, $replace, $content );  
     }
-    
-    
-/*
- * Divi: Esconder el post type proyectos.
- */
-add_filter('et_project_posttype_args', 'oregoom_esconder_proyectos_divi', 10, 1);
-function oregoom_esconder_proyectos_divi($args)
-{
-    return array_merge($args, array(
-        'public' => false,
-        'exclude_from_search' => false,
-        'publicly_queryable' => false,
-        'show_in_nav_menus' => false,
-        'show_ui' => false
-    ));
-}

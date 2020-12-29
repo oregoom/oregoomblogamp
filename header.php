@@ -26,11 +26,47 @@
             
             
             .site{
-                max-width: 800px;
+                max-width: 1060px;
                 margin-left: auto;
                 margin-right: auto;
                 padding-left: 15px;
                 padding-right: 15px;
+                
+                overflow: hidden;
+            }
+            .site-main{
+                max-width: 730px;
+                float: left;
+            }
+            .aside{
+                width: 300px;
+                float: right;
+            }
+            
+            h1{
+                font-family: Raleway, sans-serif; 
+                font-size: 35px; 
+                line-height: 1.3em; 
+                font-weight: 800;
+            }
+            h2{
+                font-family: Raleway, sans-serif; 
+                font-size: 28px; 
+                line-height: 1.2em; 
+                font-weight: 700;
+            }
+            h3{
+                font-family: Raleway, sans-serif; 
+                font-size: 22px; 
+                line-height: 1.2em; 
+                font-weight: 600;
+            }
+            
+            p, li{
+                font-family: "Roboto",sans-serif;
+                font-weight: 300!important;
+                font-size: 18px!important;
+                line-height: 1.6;
             }
             
         </style>

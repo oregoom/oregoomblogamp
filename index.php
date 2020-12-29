@@ -13,14 +13,16 @@ if(have_posts()){
     
     while (have_posts()){
         
-        the_post();        
+        the_post(); ?>       
         
-        the_title();
+            <h1><?php the_title(); ?></h1>
+
+            <amp-img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>" width="730" height="411" layout="responsive"></amp-img>
+
+            <div><?php the_content(); ?></div>
         
-        the_content();
         
-        
-    }
+    <?php }
     
     
 }

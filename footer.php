@@ -8,10 +8,14 @@
 
 ?>
 			</main><!-- #main -->
+                        <aside class="aside">
+                            <amp-img alt="A view of the sea" src="https://tpc.googlesyndication.com/simgad/1801937497749482334?sqp=4sqPyQQrQikqJwhfEAEdAAC0QiABKAEwCTgDQPCTCUgAUAFYAWBfcAJ4AcUBLbKdPg&rs=AOga4qm0XEepLMYzPYl-zphSJurkILC-Sw" width="300" height="600">
+                            </amp-img>                            
+                        </aside>
 		</div><!-- #primary -->
 	</div><!-- #content -->
 
-	<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
+	<?php // get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 
