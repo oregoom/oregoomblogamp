@@ -14,7 +14,15 @@
         <script async src="https://cdn.ampproject.org/v0.js"></script>
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
         
+        
+        
         <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+        
+        <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
+        
+        
+        <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+
 
         
 	<?php wp_head(); ?>
@@ -76,6 +84,65 @@
                 font-size: 18px!important;
                 line-height: 1.6;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            .contenedor{
+  display: block; 
+  margin: 20px auto; 
+  width: 100%; 
+  max-width: 600px; 
+  
+}
+.reproductor { 
+  display: block; 
+  width: 100%; 
+  height: 100%; 
+  padding-bottom: 56.25%; 
+  overflow: hidden; 
+  position: relative; 
+  cursor: hand; 
+  cursor: pointer; 
+}
+img.imagen-previa { 
+   display: block; 
+   left: 0; 
+   bottom: 0;
+   margin: auto; 
+   max-width: 100%; 
+   width: 100%; 
+   position: absolute; 
+   right: 0; 
+   top: 0; 
+   height: auto 
+}
+div.youtube-play { 
+   height: 64px; 
+   width: 64px; 
+   left: 50%; 
+   top: 50%; 
+   margin-left: -36px; 
+   margin-top: -36px;
+   opacity:0.7;
+   position: absolute; 
+   background:   url("https://cdn2.iconfinder.com/data/icons/social-icons-color/512/youtube-64.png") no-repeat; 
+}
+div.youtube-play:hover{
+   opacity:1; 
+}
+#youtube-iframe { 
+   width: 100%; 
+   height: 100%; 
+   position: absolute; 
+   top: 0; 
+   left: 0; 
+}
             
         </style>
 </head>
