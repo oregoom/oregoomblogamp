@@ -16,8 +16,21 @@ if(have_posts()){
         the_post(); ?>       
         
             <h1><?php the_title(); ?></h1>
-
-            <amp-img src="<?php echo get_the_post_thumbnail_url(get_the_ID(),'full'); ?>" width="730" height="411" layout="responsive"></amp-img>
+            
+            
+            
+            <?php
+            
+            $image_attributes = wp_get_attachment_image_src(get_post_thumbnail_id(), 'full');
+                
+            if ( $image_attributes ){ ?>
+                <amp-img src="<?php echo $image_attributes[0]; ?>" width="<?php echo $image_attributes[1]; ?>" height="<?php echo $image_attributes[2]; ?>" layout="responsive"></amp-img>
+            <?php } ?>
+            
+                
+                <amp-youtube data-videoid="aIo8e9PJSLs" layout="responsive" width="480" height="270"></amp-youtube>
+            
+            
 
             <div><?php the_content(); ?></div>
         

@@ -58,3 +58,17 @@ add_theme_support( 'custom-logo', array(
         
         return str_replace( $search, $replace, $content );  
     }
+    
+    
+    
+    
+    //Registramos el tamaño
+function bp_body_size(){
+    add_image_size('body-size', 700);}
+add_action( 'after_setup_theme', 'bp_body_size' );
+
+//Agregamos el tamaño a las opciones de las imágenes
+function bp_body_size_choose( $sizes ) {
+    return array_merge( $sizes, array(
+    'body-size' => 'Nuevo tamaño para el body'));}
+add_filter( 'image_size_names_choose', 'bp_body_size_choose' );

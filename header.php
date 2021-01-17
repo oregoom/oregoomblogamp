@@ -13,6 +13,10 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
         <script async src="https://cdn.ampproject.org/v0.js"></script>
 	<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+        
+        <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+
+        
 	<?php wp_head(); ?>
         <style amp-custom>
             
@@ -34,6 +38,9 @@
                 
                 overflow: hidden;
             }
+            .content-area{
+                margin-top: 30px;
+            }
             .site-main{
                 max-width: 730px;
                 float: left;
@@ -48,6 +55,7 @@
                 font-size: 35px; 
                 line-height: 1.3em; 
                 font-weight: 800;
+                margin-top: 0;
             }
             h2{
                 font-family: Raleway, sans-serif; 
