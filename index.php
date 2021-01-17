@@ -28,11 +28,11 @@ if(have_posts()){
             <?php } ?>
             
                 
-                <amp-youtube data-videoid="aIo8e9PJSLs" layout="responsive" width="480" height="270"></amp-youtube>
             
             
 
             <div><?php the_content(); ?></div>
+            
             <amp-youtube data-videoid="aIo8e9PJSLs" layout="responsive" width="480" height="270"></amp-youtube>
         
         
